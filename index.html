@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom HTML5 Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    <button style="height: 10vh;" id="mainPlay">
+      ►
+    </button>
+
+    <input type="time" id="syncTime" step="1" value="00:00:00">
+    <button style="height: 10vh;" id="syncButton">
+      Sync
+    </button>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 3vh;">
+      <div>
+        <div class="video-player">
+          <video class="video">
+            <source
+              type="video/mp4"
+            />
+            <p>Your browser doesn't support HTML5 video.</p>
+          </video>
+          <div class="controls">
+            <div class="progress">
+              <div class="progress__filled"></div>
+            </div>
+            <button class="controls__button toggleButton" title="Toggle Play">
+              ►
+            </button>
+            <input
+              type="range"
+              name="volume"
+              class="volume_slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+          </div>
+        </div>
+
+        <input type="file" id="file1">
+      </div>
+  
+      <div>
+        <div class="video-player">
+          <video class="video">
+            <source
+              type="video/mp4"
+            />
+            <p>Your browser doesn't support HTML5 video.</p>
+          </video>
+          <div class="controls">
+            <div class="progress">
+              <div class="progress__filled"></div>
+            </div>
+            <button class="controls__button toggleButton" title="Toggle Play">
+              ►
+            </button>
+            <input
+              type="range"
+              name="volume"
+              class="volume_slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+          </div>
+        </div>
+
+      <input type="file" id="file2">
+      </div>
+
+      <div>
+        <div class="video-player">
+          <video class="video">
+            <source
+              type="video/mp4"
+            />
+            <p>Your browser doesn't support HTML5 video.</p>
+          </video>
+          <div class="controls">
+            <div class="progress">
+              <div class="progress__filled"></div>
+            </div>
+            <button class="controls__button toggleButton" title="Toggle Play">
+              ►
+            </button>
+            <input
+              type="range"
+              name="volume"
+              class="volume_slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+          </div>
+        </div>
+        <input type="file" id="file3">
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
