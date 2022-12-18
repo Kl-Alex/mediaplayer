@@ -59,7 +59,7 @@ async function changePlayIcons() {
   for (let playButton of playButtons) {
     playButton.innerHTML = videosPlayState ? "❚❚" : "►";
   };
-  mainPlayButton.innerHTML = videosPlayState ? "❚❚" : "►";
+  mainPlayButton.innerHTML = videosPlayState ? "Pause" : "Play";
 }
 
 function toggleAllPlay() {

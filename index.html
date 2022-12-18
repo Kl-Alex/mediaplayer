@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom HTML5 Video Player</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
   </head>
-    <button style="height: 10vh;" id="mainPlay">
-      ►
-    </button>
+      <div class="is-center">
+        <button class="button dark" id="mainPlay">
+          Play
+        </button>
 
-    <input type="time" id="syncTime" step="1" value="00:00:00">
-    <button style="height: 10vh;" id="syncButton">
-      Sync
-    </button>
+        <button class="button dark" id="syncButton">
+          Sync
+        </button>
+        <input style="margin-left: 10px; width: 80%;" type="time" id="syncTime" step="1" value="00:00:00">
+      </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 3vh;">
       <div>
@@ -43,7 +46,7 @@
           </div>
         </div>
 
-        <input type="file" id="file1">
+        <input class="button primary icon" type="file" id="file1">
       </div>
   
       <div>
@@ -73,7 +76,7 @@
           </div>
         </div>
 
-      <input type="file" id="file2">
+      <input class="button primary icon" type="file" id="file2">
       </div>
 
       <div>
@@ -102,7 +105,7 @@
             />
           </div>
         </div>
-        <input type="file" id="file3">
+        <input class="button primary icon" type="file" id="file3">
       </div>
     </div>
 
