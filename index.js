@@ -1,4 +1,5 @@
-let videosPlayState = false
+let videosPlayState = false //stop all videos as default
+//find elements in html
 const mainPlayButton = document.querySelector("#mainPlay");
 const syncButton = document.querySelector("#syncButton");
 let syncTimeInput = document.querySelector("#syncTime");
@@ -11,6 +12,7 @@ const file1 = document.querySelector("#file1");
 const file2 = document.querySelector("#file2");
 const file3 = document.querySelector("#file3");
 
+//upload files
 [file1, file2, file3].forEach((file, index) => {
   file.addEventListener("change", (e) => {
     const file = e.target.files[0];
@@ -22,6 +24,7 @@ const file3 = document.querySelector("#file3");
   });
 });
 
+//addEventListener - обработчик событий(callback)
 for (let volume_slider of volume_sliders) {
   volume_slider.addEventListener("change", () => {
     volume_slider.closest(".video-player").children[0].volume = volume_slider.value;
@@ -35,6 +38,7 @@ for (let progressBar of progressBars) {
   });
 }
 
+//show time in percent
 for (let video of videos) {
   video.addEventListener("timeupdate", () => {
     const progressPercentage = (video.currentTime / video.duration) * 100;
@@ -42,6 +46,7 @@ for (let video of videos) {
   });
 };
 
+//унарный плюс
 syncButton.addEventListener("click", () => {
   for (let video of videos) {
     let [hours, minutes, seconds] = syncTimeInput.value.split(":");
@@ -50,7 +55,7 @@ syncButton.addEventListener("click", () => {
   };
 });
 
-
+//отслаивание в другой поток
 async function toggelPlay(video) {
   videosPlayState ? video.play() : video.pause();
 }
